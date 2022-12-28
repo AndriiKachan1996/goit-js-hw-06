@@ -28,7 +28,7 @@ function makeBox() {
 
 console.log(inputEl.value);
 buttonResetEl.addEventListener("click", () => {
-  onReset.call();
+  onReset();
 });
 
 const onReset = () => {

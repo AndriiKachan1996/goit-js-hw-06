@@ -13,4 +13,5 @@ bodyEl.style.backgroundColor = color;
 
 function makeMagic() {
   bodyEl.style.backgroundColor = getRandomHexColor();
+  spanEl.textContent = getRandomHexColor();
 }

@@ -9,7 +9,7 @@ const ingredients = [
 
 const ingredientsContainerEl = document.getElementById("ingredients");
 
-const makeIngrient = (arrOfIngredients) => {
+const makeIngrient = () => {
   return ingredients.map((ingredient) => {
     const liEl = document.createElement("li");
     liEl.textContent = ingredient;
@@ -18,5 +18,5 @@ const makeIngrient = (arrOfIngredients) => {
   });
 };
 
-const liElCollection = makeIngrient(ingredients);
+const liElCollection = makeIngrient();
 ingredientsContainerEl.append(...liElCollection);

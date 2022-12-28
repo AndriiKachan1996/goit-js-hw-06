@@ -13,15 +13,11 @@ const images = [
   },
 ];
 
-const ulContainer = document.querySelector(".gallery");
-
-for (const { url, alt } of images) {
-  ulContainer.insertAdjacentHTML(
-    "afterbegin",
-    `<li>
-  <img src="${url}" alt="${alt}" width="800" height="400"  class = "photo"/>
-</li>`
+const listEl = document.querySelector(".gallery");
+const createImgEl = images.map(({ url, alt }) => {
+  let createLiEl = listEl.insertAdjacentHTML(
+    "beforeend",
+    `<li><img src=${url} alt='${alt}'width = 300 height = 200></li>`
   );
-}
-
-console.log(ulContainer);
+  return createLiEl;
+});

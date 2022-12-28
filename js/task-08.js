@@ -7,11 +7,12 @@ function onFormSumbit(event) {
 
   const formElements = event.currentTarget.elements;
 
-  formElements.email.value === "" || formElements.password.value === ""
-    ? alert("Всі поля мають бути заповненні")
-    : console.log({
-        email: formElements.email.value,
-        password: formElements.password.value,
-      });
+  if (formElements.email.value === "" || formElements.password.value === "") {
+    return alert("Всі поля мають бути заповненні");
+  }
+  console.log({
+    email: formElements.email.value,
+    password: formElements.password.value,
+  });
   event.currentTarget.reset();
 }
